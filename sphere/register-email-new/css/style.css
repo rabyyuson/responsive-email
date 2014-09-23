@@ -1,0 +1,457 @@
+/********************************************************
+ *
+ * Summary: Sphere Register Email Template
+ * 
+ *
+ * Table of Contents
+ *
+ * 0. Normalize --------------------- index.html
+ * 1. Global ------------------------ index.html
+ * 2. Body -------------------------- index.html
+ * 3. Media Queries ----------------- index.html
+ *
+ *
+ ********************************************************/
+
+/********************************************************
+ *
+ * 0. Normalize
+ *
+ * @affects: all files
+ * @description: normalize and standardize the styles
+ *
+ ********************************************************/
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:hover,a:active{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.75em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}p,pre{margin:1em 0}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}button[disabled],input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration,input[type="search"]::-webkit-search-cancel-button{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+/********************************************************
+ *
+ * 1. Global
+ *
+ * @affects: all files
+ * @description: global style declaration
+ *
+ ********************************************************/
+
+/***************************
+ * IE10 and future W3C 
+ * viewport support
+ ***************************/
+
+@viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+
+/***************************
+ * Inner container padding 
+ * and margin fix and OS X 
+ * smooth fonts
+ ***************************/
+
+* {
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -box-sizing:border-box;
+    -webkit-font-smoothing:antialiased;
+    outline:0;
+}
+
+/***************************
+ * Flexible images
+ ***************************/
+
+img {
+    max-width:100%;
+    height:auto;
+}
+
+/***************************
+ * Fix the mobile responsive
+ * overflow issue
+ ***************************/
+
+html,
+body { 
+    width:100%;
+    overflow-x:hidden;
+}
+
+/***************************
+ * Responsive resets
+ * 16px font size 
+ * 24px line height
+ ***************************/
+
+body {
+    font:100%/1.5em, Helvetica, Arial, sans-serif;
+    background-color:#f1f2f3;
+    margin:1.5em 0;
+}
+
+/***************************
+ * Standardize and reset
+ * common style elements
+ ***************************/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color:#000;
+}
+h1 {
+    font:normal 600 2.55em/1.2em 'Raleway';
+}
+h3 {
+    font:normal 600 1em/1.2em 'Raleway';
+}
+p {
+    font:normal 300 1em/1.5em 'Raleway';
+}
+a {
+    font:normal 300 1em/1.5em 'Raleway';
+}
+ul {
+    margin:0;
+    padding:0;
+}
+li {
+    list-style-type:none;
+}
+
+/***************************
+ * Block containers
+ ***************************/
+
+.container {
+    width:100%;
+    margin:0 auto;
+}
+.container .row .columns {
+    float:left;
+}
+.row {
+    float:left;
+    clear:both;
+    width:100%;
+}
+.hr {
+    float:left;
+    width:100%;
+    background-color:#e5e5e5;
+    height:4px;
+}
+
+/***************************
+ * Clearfix for blocks
+ ***************************/
+
+.clearfix:after,
+.container:after {
+    content:'';
+    display:block;
+    overflow:hidden;
+    visibility:hidden;
+    width:0;
+    height:0;
+    clear:both;
+}
+.clearfix, 
+.container { 
+    zoom:1;
+}
+
+/***************************
+ * Fluid 16 column grid
+ ***************************/
+
+.container .row .columns.one { width: 6.25%; }
+.container .row .columns.two { width: 12.5%; }
+.container .row .columns.three { width: 18.75%; }
+.container .row .columns.four { width: 25%; }
+.container .row .columns.five { width: 31.25%; }
+.container .row .columns.six { width: 37.5%; }
+.container .row .columns.seven { width: 43.75%; }
+.container .row .columns.eight { width: 50%; }
+.container .row .columns.nine { width: 56.25%; }
+.container .row .columns.ten { width: 62.5%; }
+.container .row .columns.eleven { width: 68.75%; }
+.container .row .columns.twelve { width: 75%; }
+.container .row .columns.thirteen { width: 81.25%; }
+.container .row .columns.fourteen { width: 87.5%; }
+.container .row .columns.fifteen { width: 93.75%; }
+.container .row .columns.sixteen { width: 100%; }
+
+/***************************
+ * 1260px maximum width
+ ***************************/
+
+.container .row .inner {
+    max-width:631px;
+    position:relative;
+    margin:0 auto;
+    background-color:#fff;
+    border:1px solid #e1e1e1;
+    -webkit-box-shadow:0 2px 1px #c4c4c4 rgb(0, 0, 0, 0.5);
+    -moz-box-shadow:0 2px 1px #c4c4c4 rgb(0, 0, 0, 0.5);
+    box-shadow:0 2px 1px #c4c4c4 rgb(0, 0, 0, 0.5);
+}
+
+/********************************************************
+ *
+ * 2. Body
+ *
+ * @affects: all files
+ * @description: default styles for the body
+ *
+ ********************************************************/
+
+.container.body .row .inner.clearfix {
+    padding:2em 1.75em;
+}
+
+/***************************
+ * Logo
+ ***************************/
+
+.container.body .row .inner.clearfix .columns.sixteen .logo { 
+    float:left;
+    width:100%;
+}
+.container.body .row .inner.clearfix .columns.sixteen .logo img { 
+    float:left;
+}
+
+/***************************
+ * Horizontal Rule
+ ***************************/
+
+.container.body .row .inner.clearfix .columns.sixteen .hr {
+    margin-top:1em;
+}
+
+/***************************
+ * Hero
+ ***************************/
+
+.container.body .row .inner.clearfix .columns.sixteen .hero {
+    float:left;
+    margin-top:3em;
+}
+.container.body .row .inner.clearfix .columns.sixteen .hero h1 {
+    float:left;
+    width:100%;
+    text-align:center;
+}
+.container.body .row .inner.clearfix .columns.sixteen .hero p {
+    float:left;
+    width:100%;
+    text-align:left;
+    margin-top:1.5em;
+}
+.container.body .row .inner.clearfix .columns.sixteen .hero .cta {
+    float:left;
+    width:100%;
+}
+.container.body .row .inner.clearfix .columns.sixteen .hero .cta a {
+    margin:0 auto;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:1.25em;
+    width:45%;
+    background-color:#11aced;
+    color:#fff;
+    padding:0.5em 0.25em;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    -webkit-transition:all 0.25s ease;
+    -moz-transition:all 0.25s ease;
+    -o-transition:all 0.25s ease;
+    transition:all 0.25s ease;
+}
+.container.body .row .inner.clearfix .columns.sixteen .hero .cta a:hover {
+    background-color:#3ec4fd;
+}
+
+/***************************
+ * Dotted Line
+ ***************************/
+
+.container.body .row .inner.clearfix .columns.sixteen .dotted {
+    float:left;
+    width:100%;
+    height:2px;
+    background:url('../images/dotted.png') repeat-x left top;
+    margin-top:2em;
+}
+
+
+/***************************
+ * Recommendations
+ ***************************/
+
+.container.body .row .inner.clearfix .columns.sixteen .recommendations {
+    float:left;
+    width:100%;
+    margin-top:2.5em;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations h3 {
+    float:left;
+    width:100%;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul {
+    float:left;
+    width:100%;
+    margin-top:1.5em;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul li {
+    float:left;
+    width:23%;
+    margin-right:0.5em;
+    display:block;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul li a {
+    text-decoration:none;
+    color:#000;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul li a:hover p {
+    color:#2996c8;
+    text-decoration:underline;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul li.last-child {
+    margin-right:0;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul li a img {
+    float:left;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul li a p {
+    float:left;
+    width:100%;
+    font-size:0.85em;
+    font-weight:bold;
+    margin:0.75em 0 0 0;
+}
+.container.body .row .inner.clearfix .columns.sixteen .recommendations ul li a span {
+    float:left;
+    width:100%;
+    color:#ccc;
+    font-size:0.75em;
+    text-transform:uppercase;
+}
+
+
+/***************************
+ * Footer
+ ***************************/
+
+.container.body .row .inner.clearfix .columns.sixteen .footer {
+    float:left;
+    width:100%;
+    margin:1.5em 0 0.5em 0;
+}
+.container.body .row .inner.clearfix .columns.sixteen .footer p {
+    float:left;
+    width:100%;
+    margin:0;
+    font-size:0.75em;
+    color:#999;
+    text-align:center;
+}
+.container.body .row .inner.clearfix .columns.sixteen .footer p a {
+    color:#2996c8;
+    text-decoration:none;
+}
+.container.body .row .inner.clearfix .columns.sixteen .footer p a:hover {
+    text-decoration:underline;
+}
+
+/********************************************************
+ *
+ * 3. Media Queries
+ *
+ * @affects: all files
+ * @description: breakpoints for different resolutions
+ *
+ ********************************************************/
+
+@media only screen and (min-width: 570px) and (max-width: 631px) {
+    
+    /***************************
+     * Recommendations
+     ***************************/
+    
+    .container.body .row .inner.clearfix .columns.sixteen .recommendations ul li {
+        width:23%;
+    }
+}
+
+@media only screen and (min-width: 520px) and (max-width: 569px) {
+    
+    /***************************
+     * Hero
+     ***************************/
+    
+    .container.body .row .inner.clearfix .columns.sixteen .hero .cta a {
+        font-size:1em;
+        width:172px;
+    }
+    
+}
+
+@media only screen and (min-width: 419px) and (max-width: 519px) {
+
+    /***************************
+     * Hero
+     ***************************/
+    
+    .container.body .row .inner.clearfix .columns.sixteen .hero .cta a {
+        font-size:1em;
+        width:172px;
+    }
+    
+    /***************************
+     * Recommendations
+     ***************************/
+    
+    .container.body .row .inner.clearfix .columns.sixteen .recommendations ul li {
+        width:45%;
+        margin-right:1em;
+        margin-bottom:1em;
+    }
+    
+}
+
+@media only screen and (min-width: 0px) and (max-width: 418px) {
+
+    /***************************
+     * Hero
+     ***************************/
+    
+    .container.body .row .inner.clearfix .columns.sixteen .hero .cta a {
+        font-size:1em;
+        width:172px;
+    }
+    
+    /***************************
+     * Recommendations
+     ***************************/
+    
+    .container.body .row .inner.clearfix .columns.sixteen .recommendations h3 {
+        text-align:center;
+    }
+    .container.body .row .inner.clearfix .columns.sixteen .recommendations ul li {
+        width:100%;
+        text-align:center;
+        margin-bottom:1em;
+    }
+    .container.body .row .inner.clearfix .columns.sixteen .recommendations ul li a img {
+        margin:0 auto;
+        width:117px;
+        height:108px;
+        float:none;
+        display:block;
+    }
+    
+}
